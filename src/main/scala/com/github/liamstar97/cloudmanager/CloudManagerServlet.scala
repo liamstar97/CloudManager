@@ -1,13 +1,13 @@
 package com.github.liamstar97.cloudmanager
 
-import java.io.PrintWriter
+import java.io.{File, PrintWriter}
 
 import org.scalatra._
 
 import scala.io.Source
 
 class CloudManagerServlet extends ScalatraServlet {
-  val dbPath = "data\\db.csv"
+  val dbPath = "data" + File.separatorChar + "db.csv"
   def loadFakeDBFromFile(path: String, separator: String = ",") = {
     Source.fromFile(path).getLines().toList.map(_.split(separator).toList)
   }
@@ -22,8 +22,15 @@ class CloudManagerServlet extends ScalatraServlet {
     "hi"
   }
 
+  get("/login") {
+    views.html.login()
+  }
+
   get("/users/list") {
-    fakeDb.take(params.getOrElse("max_rows", "10").toInt).map(_.mkString(" | ")).mkString("\n")
+    fakeDb
+      .take(params.getOrElse("max_rows", "10").toInt)
+      .map(_.mkString(" | "))
+      .mkString("\n")
   }
 
   get("/users/find") {
@@ -35,7 +42,7 @@ class CloudManagerServlet extends ScalatraServlet {
   }
 
   get("/users/add") {
-    val newRow = List(params("id"), params("email"), params("token"))
+    val newRow = List(params("email"), params("pass"))
     fakeDb = fakeDb ++ List(newRow)
     updateDB
     redirect("/users/list?max_rows=2000")
