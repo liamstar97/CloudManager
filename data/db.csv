@@ -1,0 +1,28 @@
+Features and Specs
+Printer,PIXMA MX892,HP Office Jet Pro 8720,MFC-J6520DW
+B&W Print Time (Sec.),20,9,2
+Color Print Time (Sec.),20,10,3
+B&W Print Quality (DPI),600 x 600,1200 x 1200,6000 x 1200
+Color Print Quality (DPI),9600 x 2400,4800 x 1200,6000 x 1200
+Scanner (y/n) and DPI,600 x 600,1200 x 1200,2400 x 2400
+Wireless Printing,y,y,y
+Prossesor Speed (MHz),N/A,600,N/A
+Memory (MB),N/A,256,N/A
+Yellow Cartridge Capacity (Pages),340,1600,1200
+Black Cartridge Capacity (Pages),340,3000,2400
+Cyan Cartridge Capacity (Pages),340,1600,1200
+Magenta Cartridge Capacity (Pages),340,1600,1200
+
+
+Costs
+Printer Cost,$199.99,$229.99,$229.99
+Paper Cost (500 Pages),$7.99,$7.99,$7.99
+Yellow Cartridge,$13.99,$31.99,$25.99
+Black Cartridge,$15.99,$50.99,$29.99
+Cyan Cartridge,$13.99,$31.99,$23.99
+Magenta Cartridge,$13.99,$31.99,$22.99
+Total Cartridge Cost,$57.96,$146.96,$102.96
+Total Initial Cost,$265.94,$384.94,$340.94
+Cost After Two Years of Operation,"$12,529.48","$6,246.77","$5,999.90"
+1234,bob,12344321asdf
+4321,boob,12asdf344321asdf
